@@ -26,9 +26,9 @@ namespace QrCodeGeneratorPOC.Controllers
         [HttpPost]
         public ActionResult Index(QrCodeModel qrCodeModel)
         {
-            string modelInfo = $"ProductName: {qrCodeModel.ProductName}" +
-                $"\n\nProductType: {qrCodeModel.ProductType}" +
-                $"\n\nProductDescription: {qrCodeModel.ProductDescription}";
+            string modelInfo = $"Product Name: {qrCodeModel.ProductName}" +
+                $"\n\nProduct Type: {qrCodeModel.ProductType}" +
+                $"\n\nProduct Description: {qrCodeModel.ProductDescription}";
 
             QRCodeGenerator qrCodeGenerator = new QRCodeGenerator();
             QRCodeData qrCodeData = qrCodeGenerator.CreateQrCode(modelInfo, QRCodeGenerator.ECCLevel.Q);
